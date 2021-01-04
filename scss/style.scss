@@ -1,0 +1,328 @@
+@import "coloresRedesSociales";
+
+*{
+    margin: 0;  /*reinicio estilos*/
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*Defino tamaño para celular. En caso de usar celular, elimino la imagen del header*/
+@media only screen and (max-width:414px) {
+    header {
+        display: none;   
+    }
+
+    .parrafo {
+        z-index: 1;
+        width: 740px;
+        height: 520px;
+        padding: 20px 20px;
+        font-size: 20px;
+        line-height: 1.5;
+        text-align: justify;
+    }
+    .textoPortada {
+        text-align: center;
+        padding-top: 35px;
+        color: #afafa2;
+    } 
+
+    form{
+        width: 100%;
+    }
+}
+
+@media only screen and (min-width:415px) and (max-width:1023px) {
+    .textoPortada {
+        text-align: center;
+        padding-top: 35px;
+        color: #1f1f1e;
+    }  
+}
+
+/*defino tamaño para tablet y mayores dispositivos*/
+@media only screen and (min-width:1024px) {
+    
+    .parrafo {
+        z-index: 1;
+        width: 740px;
+        height: 320px;
+        padding: 20px 20px;
+        font-size: 20px;
+        line-height: 1.5;
+        background: rgba(0,0,0,0.2);
+        box-shadow: 1px 5px 35px rgba(0, 0, 0, 0.80);
+        border-radius: 5px;
+        text-align: justify;
+    }
+
+    .textoPortada {
+        text-align: center;
+        padding-top: 35px;
+        color: #1f1f1e;
+    }
+}
+
+/*-----------Defino imagen de fondo y tamaño del header-------------*/
+header {
+    background-image: url(images/fondoheader.jpg);
+    height: 350px;  
+}
+
+
+.contenedor {
+    padding-top: 130px;
+    padding-left: 100px;
+    font-size: 60px;
+    line-height: 70px;
+    display: flex;
+}
+
+.contenedor ul {  /*estilo Disfruta Usa Divertite*/
+    list-style: none;
+    padding-left: 35px;
+    padding-top: 5px;
+    animation: movement 8s infinite;
+    color:#F4ECC3;  
+}
+
+.titulo {             /*estilo de La Fermina*/
+    font-size: 70px;
+    display: flex;
+    display: inline;
+    font-weight: bold;
+    color:#F4ECC3;
+}
+
+@keyframes movement {     /*especifico movimiento header*/
+
+    0% {margin-top: 0px;}
+    20% {margin-top: 0px;}
+    25% {margin-top: -70px;}
+    50% {margin-top: -70px;}
+    55% {margin-top: -140px;}
+    80% {margin-top: -140px;}
+    85% {margin-top: -70px;}
+    95% {margin-top: -70px;}
+    100% {margin-top: 0px;}
+    }
+
+/*------------------------------Fin--------------------------------*/
+
+
+body {
+    background-image: url(../lafermina/images/fondocuero.jpg);
+}
+
+
+/*-----------------------INICIO barra Redes Sociales (iconos de icomoon.io)------------------------*/
+
+
+.barraRedesSociales {
+    position: fixed;   /*queda fijo*/
+    right: 0; /*queda a la derecha*/
+    top: 50%; /*se elige la posicion horizontal*/
+    font-size: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    z-index: 100; /*resalta ante todos los elementos*/
+}
+
+.icon {
+    color: white; /*color blanco*/
+    text-decoration: none;
+    padding: .7rem;
+    display: flex;    
+}
+
+.icon-facebook2 {
+    background: $colorFB;   /*utilizo sass para el color*/
+}
+
+.icon-twitter {
+    background: $colorTW;   /*utilizo sass para el color*/
+}
+
+.icon-whatsapp {
+    background: $colorWA;   /*utilizo sass para el color*/
+}
+
+.icon-instagram {
+    background: $colorIG;  /*utilizo sass para el color*/
+}
+
+
+.icon:first-child {
+    border-radius: 1rem 0 0 0; /*borde esquina sup*/
+}
+.icon:last-child {
+    border-radius: 0 0 0 1rem;
+}
+
+/*-------------------------FIN barra Redes Sociales-------------------------*/
+
+
+
+
+
+/*---------------------Inicio fotos Index*----------------------*/
+.fotos {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding-top: 65px;
+    margin-bottom: 90px;
+      
+}
+
+
+
+.content figure {
+    position: flex;
+    position: relative;
+    justify-content: center;
+    height: 170px;
+    width: 240px;
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0px 15px 10px rgba(0, 0, 0, 0.50); 
+     
+}
+
+.content figure img {
+    width: 100%;
+    height: 100%;
+    transition: all 500ms ease-out;
+    
+}
+
+.content figure .capa {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(253, 250, 105, 0.5);
+    transition: all 500ms ease-out;
+    opacity: 0;
+    visibility: hidden;
+    text-align: center;
+    font-family: 'Julius Sans One', sans-serif;
+    font-size: 15px;
+}
+.content figure:hover > .capa {
+    opacity: 1;
+    visibility: visible;
+}
+
+/*------------------------Fin fotos Index----------------------------*/
+
+
+
+
+/*----------------------------Inicio Footer---------------------------*/
+.footer {
+    position: fixed;
+    bottom:0;
+    width:100%;
+    height:60px;
+    text-align: center;  
+    margin-top: 10px;
+}
+/*-----------------------------Fin Footer-----------------------------*/
+
+
+
+
+
+/*-------------------------INICIO Seccion Ayuda---------------------------*/
+.mapa{
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+    width: 100%;
+    margin-bottom: 90px;
+    
+}
+
+.textoAyuda {
+    text-align: center;
+    padding-top: 10px;  
+}
+
+.datosAyuda {
+    
+    padding-left: 30px;
+    padding-bottom: 80px;
+}
+/*-------------------------FIN Seccion Ayuda -------------------------*/
+
+
+
+
+
+/*--------------INICIO Seccion: Nosotros - parrafo ---------------*/
+.parrafo1 {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding-top: 50px;
+}
+
+
+
+.parrafo img {
+    width: 200px;
+    border-radius: 10px;
+    float: left;
+    margin-right: 15px;
+}
+
+/*----------------FIN Seccion: Nosotros - parrafo ------------------*/
+
+
+
+
+/*----------------------Inicio seccion Formulario-------------------*/
+
+.formulario {
+    padding-top: 80px;
+}
+
+form {
+    width: 450px;
+    margin: auto;
+    background: rgba(0,0,0,0.4);
+    padding: 10px 20px;
+    box-sizing: border-box;
+    border-radius: 7px;
+    box-shadow: 1px 5px 35px rgba(0, 0, 0, 0.80);
+}
+
+h2 {
+    text-align: center;
+    margin: 0;
+    font-size: 30px;
+    margin-bottom: 20px;
+    color: #F4ECC3;
+}
+
+input, textarea {
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 7px;
+    box-sizing: border-box;
+}
+
+textarea {
+    min-height: 100px;
+    max-height: 200px;
+    max-width: 100%;
+}
+.boton {
+    color: black;
+    background: rgb(192, 192, 192);
+    padding: 20px;
+}
+
+/*--------------------fin seccion formulario----------------*/
